@@ -1,9 +1,7 @@
-
-
 public class RecursionBasic {
 
     public static void printDec(int n) {
-        if (n == 1) {
+        if (n == 1) { 
             System.out.print(n+" ");
             return;
         }
@@ -14,7 +12,7 @@ public class RecursionBasic {
     public static void printInc(int n) {
         if (n == 1) {
             System.out.print(n+" ");
-            return;
+            return; 
         }
         printInc(n-1);
         System.out.print(n+" ");
