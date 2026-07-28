@@ -3,15 +3,14 @@ package arraylist;
 import java.util.ArrayList;
 
 public class Basics {
-
     public static void main(String args[]) {
         // Java Collection Framework
         // String | Boolean | Float
 
         // ClassName objName = new ClassName();
         ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<String> list2 = new ArrayList<>();
-        ArrayList<Boolean> list3 = new ArrayList<>();
+        // ArrayList<String> list2 = new ArrayList<>();
+        // ArrayList<Boolean> list3 = new ArrayList<>();
 
         // Add
         list.add(1); // O(1)
@@ -56,5 +55,36 @@ public class Basics {
             System.out.print(list.get(i) + " ");
         }
         System.out.println();
+
+        // Maximum
+        ArrayList<Integer> list1 = new ArrayList<>();
+
+        list1.add(2); // O(1)
+        list1.add(5);
+        list1.add(9);
+        list1.add(6);
+        list1.add(8);
+
+        int max = Integer.MIN_VALUE;
+        for(int i=0; i<list.size(); i++) {
+            // if(max < list.get(i)) {
+            //     max = list.get(i);
+            // }
+            max = Math.max(max, list.get(i));
+        }
+        System.out.println("max element = " + max);
+
+
+        // swap 2 numbers
+        int idx1 = 1, idx2 = 3;
+        System.out.println(list1);
+        swap(list1, idx1, idx2);
+        System.out.println(list1);
+    }
+ 
+    public static void swap(ArrayList<Integer> list1, int idx1, int idx2) {
+        int temp = list1.get(idx1);
+        list1.set(idx1, list1.get(idx2));
+        list1.set(idx2, temp);
     }
 }
