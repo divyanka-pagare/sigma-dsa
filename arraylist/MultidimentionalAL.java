@@ -42,6 +42,8 @@ public class MultidimentionalAL {
         mainList.add(list3);
         mainList.add(list4);
         mainList.add(list5);
+        list4.remove(3);
+        list4.remove(2);
 
         for(int i=0; i<mainList.size(); i++) {
             ArrayList<Integer> currList = mainList.get(i);
