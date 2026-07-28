@@ -53,6 +53,9 @@ public class LinkedList {
         System.out.println("null");
     }
 
+    //add in the middle 
+    //linking - O(1)
+    //where to link - O(n)
     public void add(int idx, int data) {
         if(idx == 0) {
             addFirst(data);
