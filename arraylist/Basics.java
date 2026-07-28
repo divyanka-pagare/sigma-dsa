@@ -1,6 +1,9 @@
 package arraylist;
 
-import java.util.ArrayList;
+import java.util.*;
+// import java.util.ArrayList;
+// import java.util.Collections;
+
 
 public class Basics {
     public static void main(String args[]) {
@@ -76,10 +79,26 @@ public class Basics {
 
 
         // swap 2 numbers
+        System.out.println("------swap 2 no -----------");
         int idx1 = 1, idx2 = 3;
         System.out.println(list1);
-        swap(list1, idx1, idx2);
+        swap(list1, idx1, idx2); 
         System.out.println(list1);
+
+        //sort
+        System.out.println("---------------sorting---------------");
+        //ascending
+        Collections.sort(list1);
+        System.out.println(list1);
+        //descending
+        Collections.sort(list1, Collections.reverseOrder()); 
+        System.out.println(list1);
+
+        //Comparator - define fnx logic 
+        //Collections - class & Collection - Interface
+
+
+
     }
  
     public static void swap(ArrayList<Integer> list1, int idx1, int idx2) {
