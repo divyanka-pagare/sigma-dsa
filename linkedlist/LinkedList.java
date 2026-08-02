@@ -371,15 +371,27 @@ public class LinkedList {
     public static void main(String args[]){
 
         LinkedList ll = new LinkedList();
+        
         ll.addLast(1);
         ll.addLast(2);
         ll.addLast(3);
         ll.addLast(4);
         ll.addLast(5);
-        //1->2->3->4->5->null
+        ll.addLast(6);
+        //1->2->3->4->5->6->null
         ll.print();
         ll.zigZag();
         ll.print();
+        
+        // ll.addFirst(1);
+        // ll.addFirst(2);
+        // ll.addFirst(3);
+        // ll.addFirst(4);
+        // ll.addFirst(5);
+        // //5->4->3->2->1->null
+        // ll.print();
+        // ll.head = ll.mergeSort(ll.head);
+        // ll.print();
 
 
         //****************************************************************
