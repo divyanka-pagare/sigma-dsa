@@ -56,14 +56,54 @@ public class CircularLL {
         System.out.println(item + "Node is not present in the list");
         return last;
     }
-    
 
+    public static Node remove(Node last, int key) {
+        if(last == null)
+            return null;
+        if(last.data == key && last.next == last) {
+            last = null;
+            return last;
+        }
+        Node temp = last, d = new Node();
+        if(last.data == key) {
+            while(temp.next != last) {
+                temp = temp.next;
+            }
+            temp.next = last.next;
+            last = temp.next;
+        }
+        while(temp.next != last && temp.next.data != key) {
+            temp = temp.next;
+        }
+        if(temp.next.data == key) {
+            d = temp.next;
+            temp.next = d.next;
+        }
+        return last;
+    }
+
+    public static void traverse(Node last) {
+        Node p;
+        if(last == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        p = last.next;
+        do{
+            System.out.print(p.data + " ");
+            p = p.next;
+        } while(p != last.next);
+    }
+    
 
     public static void main(String args[]) {
         Node last = null;
         last = addFirst(last, 1);
         last = addLast(last, 2);
         last = addFront(last, 3);
-
+        last = addAfter(last, 10, 2);
+        traverse(last);
+        remove(last, 8);
+        traverse(last);
     }
 }
