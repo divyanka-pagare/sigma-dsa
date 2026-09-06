@@ -11,7 +11,7 @@ public class HeightOfTree {
             this.right = null;
         }
     }
-
+//*********************************************************** */
     public static int count(Node root) {
         if(root == null) {
             return 0;
@@ -21,7 +21,17 @@ public class HeightOfTree {
         int rightCount = count(root.right);
         return leftCount + rightCount + 1;
     }
+// ***************************************************************
 
+    public static int sum(Node root) {
+        if(root == null) {
+            return 0;
+        }
+
+        int leftSum = sum(root.left);
+        int rightSum = sum(root.right);
+        return leftSum + rightSum + root.data;
+    }
     public static void main(String args[]) {
 
         /*
@@ -42,6 +52,7 @@ public class HeightOfTree {
        root.right.left = new Node(6);
        root.right.right = new Node(7);
 
-       System.out.println(count(root));
+       System.out.println(count(root)); //7
+       System.out.println(sum(root)); //28
     }
 }
